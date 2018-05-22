@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Smart Bluetooth Tracker</string>
+    <string name="about_the_program">This app shows the nearest bluetooth tag and the the distance between your MCU and the bluetooth module.</string>
+    <string name="the_team">The team</string>
+    <string name="members">Members:</string>
+</resources>
