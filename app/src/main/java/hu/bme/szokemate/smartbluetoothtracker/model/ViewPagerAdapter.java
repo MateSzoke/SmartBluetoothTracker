@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import hu.bme.szokemate.smartbluetoothtracker.ui.AboutFragment;
 import hu.bme.szokemate.smartbluetoothtracker.ui.DetailsFragment;
 
+//ViewPagerAdapter for MainActivity
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private static final int NUM_PAGES = 2;

@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 import hu.bme.szokemate.smartbluetoothtracker.model.ThingSpeak.Field2;
 
-
+//Event for getting field2 from ThingSpeak
 public class GetField2Event {
     private int code;
     private Field2 field;

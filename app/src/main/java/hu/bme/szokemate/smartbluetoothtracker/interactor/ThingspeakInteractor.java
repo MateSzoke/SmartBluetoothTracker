@@ -9,6 +9,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+//Interactor class which get field1 and field2 from ThingSpeak
+//This class calls http request with retrofit
 public class ThingspeakInteractor {
 
 

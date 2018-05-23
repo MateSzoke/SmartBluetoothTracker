@@ -2,10 +2,7 @@ package hu.bme.szokemate.smartbluetoothtracker.model.ThingSpeak;
 
 import java.util.Date;
 
-/**
- * Created by mate on 2018. 05. 22..
- */
-
+//Model class for Field1 (required because of unique names)
 public class Field1 {
     Date created_at;
     int entry_id;

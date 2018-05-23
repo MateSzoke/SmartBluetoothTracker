@@ -8,7 +8,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
-
+//Retrofit singleton object
 public class ApiClient {
 
     // singleton instance of this client
@@ -28,6 +28,7 @@ public class ApiClient {
         return clientInstance;
     }
 
+    //ApiInterface for get data from ThingSpeak
     public interface ThingSpeakApiInterface {
 
 

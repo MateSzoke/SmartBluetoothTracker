@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 import hu.bme.szokemate.smartbluetoothtracker.model.ThingSpeak.Field1;
 
-
+//Event for getting field1 from ThingSpeak
 public class GetField1Event {
     private int code;
     private Field1 field;
@@ -28,7 +28,6 @@ public class GetField1Event {
 
     public void setField(Field1 field) {
         this.field = field;
-        Logger.getAnonymousLogger().info("EVENT SETFIELD TO" + field);
     }
 
     public Throwable getThrowable() {

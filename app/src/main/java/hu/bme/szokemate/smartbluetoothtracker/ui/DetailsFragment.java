@@ -69,6 +69,7 @@ public class DetailsFragment extends Fragment {
         return view;
     }
 
+    //Refresh Tag and RSSI labels
     public void refreshFields(){
         networkExecutor.execute(new Runnable() {
             @Override
@@ -87,6 +88,7 @@ public class DetailsFragment extends Fragment {
     }
 
 
+    //Get field1 event
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final GetField1Event event){
         if (event.getThrowable() != null)
@@ -95,6 +97,7 @@ public class DetailsFragment extends Fragment {
     }
 
 
+    //Get field2 event
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final GetField2Event event){
         if (event.getThrowable() != null)
@@ -104,6 +107,7 @@ public class DetailsFragment extends Fragment {
     }
 
 
+    //Calculate distance from rssi
     public double calculateDistance(double rssi) {
         int txPower = -65; //hard coded power value. Usually ranges between -59 to -65
 
@@ -121,6 +125,7 @@ public class DetailsFragment extends Fragment {
         }
     }
 
+    //Background thread class, it refresh data from ThingSpeak server
     public  class PollingServerRunnable implements Runnable{
 
         @Override
