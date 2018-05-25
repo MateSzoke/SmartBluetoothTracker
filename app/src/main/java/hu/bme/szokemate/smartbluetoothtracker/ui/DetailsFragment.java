@@ -95,6 +95,7 @@ public class DetailsFragment extends Fragment {
             case "0c": ivPositionImage.setImageResource(R.drawable.position_0c); break;
             case "13": ivPositionImage.setImageResource(R.drawable.position_13); break;
             case "14": ivPositionImage.setImageResource(R.drawable.position_14); break;
+            default: ivPositionImage.setImageResource(R.drawable.position_default);
         }
     }
 
