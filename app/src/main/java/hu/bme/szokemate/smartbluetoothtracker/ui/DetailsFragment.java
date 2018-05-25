@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -27,6 +28,7 @@ public class DetailsFragment extends Fragment {
     private TextView tvTag;
     private  TextView tvDistance;
     private TextView tvRssi;
+    private ImageView ivPositionImage;
 
     Executor networkExecutor;
     ThingspeakInteractor thingspeakInteractor;
@@ -52,6 +54,7 @@ public class DetailsFragment extends Fragment {
         tvTag = view.findViewById(R.id.tvTag);
         tvDistance = view.findViewById(R.id.tvDistance);
         tvRssi = view.findViewById(R.id.tvRssi);
+        ivPositionImage = view.findViewById(R.id.ivPositionImage);
         thingspeakInteractor = new ThingspeakInteractor();
         networkExecutor = new Executor() {
             @Override
@@ -87,6 +90,13 @@ public class DetailsFragment extends Fragment {
         refreshFields();
     }
 
+    public void setPositionImage(String tag){
+        switch (tag){
+            case "0c": ivPositionImage.setImageResource(R.drawable.position_0c); break;
+            case "13": ivPositionImage.setImageResource(R.drawable.position_13); break;
+            case "14": ivPositionImage.setImageResource(R.drawable.position_14); break;
+        }
+    }
 
     //Get field1 event
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -94,6 +104,7 @@ public class DetailsFragment extends Fragment {
         if (event.getThrowable() != null)
             event.getThrowable().printStackTrace();
             tvTag.setText(event.getField().getField1());
+            setPositionImage(event.getField().getField1());
     }
 
 
